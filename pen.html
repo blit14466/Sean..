@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penpalmega</title>
+    <link rel="stylesheet" href="styles.css">
+<style type="text/css" id="dcoder_stylesheet">body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+}
+`` ### Step 5: Create the JavaScript File
+
+1. **Create a JavaScript File**: In the same folder, create a file named `script.js`.
+
+```javascript
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can add code to handle the signup process
+    alert('Sign up successful!'); // Placeholder for actual signup logic
+});
+
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you can add code to handle the login process
+    alert('Login successful!'); // Placeholder for actual login logic
+});
+button {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+}</style></head>
+<body>
+    <header>
+        <h1>Welcome to Penpalmega</h1>
+        <nav>
+            <ul>
+                <li><a href="#signup">Sign Up</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#settings">Settings</a></li>
+                <li><a href="#account">Account</a></li>
+                <li><a href="#help">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="signup">
+            <h2>Sign Up</h2>
+            <form id="signupForm">
+                <input type="text" placeholder="Name" required>
+                <input type="text" placeholder="Username" required>
+                <input type="number" placeholder="Age" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <input type="text" placeholder="Country" required>
+                <input type="text" placeholder="City" required>
+                <textarea placeholder="Description"></textarea>
+                <button type="submit">Confirm</button>
+            </form>
+        </section>
+
+        <section id="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="settings">
+            <h2>Settings</h2>
+            <!-- Add settings options here -->
+        </section>
+
+        <section id="account">
+            <h2>Account</h2>
+            <!-- Add account options here -->
+        </section>
+
+        <section id="help">
+            <h2>Help</h2>
+            <p>How to sign up</p>
+            <p>How to send messages</p>
+            <p>For more information contact <a href="mailto:your-email@gmail.com">your-email@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact us at <a href="mailto:your-email@gmail.com">your-email@gmail.com</a></p>
+        <p>Follow us on: YouTube, Instagram, TikTok, Facebook</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<section id="settings">
+    <h2>Settings</h2>
+    <form id="settingsForm">
+        <label>Who can message me:</label>
+        <select>
+            <option value="everyone">Everyone</option>
+            <option value="friends">Friends</option>
+        </select>
+        <label>Who can see my friend list:</label>
+        <select>
+            <option value="everyone">Everyone</option>
+            <option value="friends">Friends</option>
+            <option value="only_me">Only Me</option>
+        </select>
+        <label>Who can see my email:</label>
+        <select>
+            <option value="everyone">Everyone</option>
+            <option value="friends">Friends</option>
+            <option value="only_me">Only Me</option>
+        </select>
+        <label>Who can see me online:</label>
+        <select>
+            <option value="everyone">Everyone</option>
+            <option value="friends">Friends</option>
+            <option value="only_me">Only Me</option>
+        </select>
+        <button type="submit">Save Settings</button>
+    </form>
+</section>
+<section id="account">
+    <h2>Account</h2>
+    <button onclick="deactivateAccount()">Deactivate Account</button>
+    <button onclick="deleteAccount()">Delete Account</button>
+    <button onclick="changePassword()">Change Password</button>
+</section>
+<section id="editProfile">
+    <h2>Edit Profile</h2>
+    <form id="editProfileForm">
+        <input type="file" accept="image/*" placeholder="Add Picture">
+        <input type="text" placeholder="Description">
+        <input type="number" placeholder="Age">
+        <input type="text" placeholder="Country">
+        <input type="text" placeholder="City">
+        <input type="text" placeholder="Hobbies">
+        <input type="text" placeholder="Language">
+        <input type="text" placeholder="Gender">
+        <input type="email" placeholder="Email">
+        <button type="submit">Update Profile</button>
+    </form>
+</section>
+<section id="userProfile">
+    <h2>User Profile</h2>
+    <button onclick="viewProfile()">View Profile</button>
+    <button onclick="addFriend()">Add Friend</button>
+    <button onclick="commentOnProfile()">Comment on Profile</button>
+    <button onclick="sendMessage()">Message</button>
+    <button onclick="blockUser ()">Block</button>
+    <button onclick="reportUser ()">Report</button>
+</section><script type="text/javascript" id="dcoder_script">function validateSignupForm() {
+  const password = document.querySelector('input[type="password"]').value;
+  const confirmPassword = document.querySelector('input[placeholder="Confirm Password"]').value;
+  if (password !== confirmPassword) {
+    alert("Passwords do not match!");
+    return false;
+  }
+  return true;
+}
+
+document.getElementById('signupForm').addEventListener('submit', function(event) {
+  if (!validateSignupForm()) {
+    event.preventDefault();
+  } else {
+    alert('Sign up successful!');
+  }
+});
+</script></body></html>
